@@ -38,6 +38,17 @@ The primary visual interface is a standard character-based display, ideal for sy
 * **Module:** **LCD Display 16x2**
 * **Controller:** Integrated **HITACHI HD44780U**
 
+Second visual interface is 160x128 LCD monitor with graphic capabilities.
+
+* **Module:** **LCD Grapical 160x128 DS-G160128STBWW**
+* **Controller:** Integrated **TOSHIBA T6963**
+
+Third choice is a VDU module based a TMS9918A Video Display Processor with dedicate RAM.
+
+* **Module:** **RCA Output Connrctor for NTSC CRT Dsplay**
+* **VDP:**  **Texas Instrument TMS9918A**
+* **VRAM:**  **HM62256 32 Kbyte**
+
 ### Connectivity
 * **Serial Communication:** Full asynchronous serial support via a dedicated **DB9 Serial Port**.
 
