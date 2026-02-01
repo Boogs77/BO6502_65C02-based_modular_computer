@@ -14,7 +14,7 @@ A powerful stereo sound expansion for the BO6502 system, featuring two **General
 
 ## 🎵 Audio Architecture
 
-The board is designed with a true stereo configuration, utilizing due independent PSGs and dedicated amplification for each channel.
+The board is designed with a true stereo configuration, utilizing two independent PSGs and dedicated amplification for each channel.
 
 * **Sound Generators:** 2x AY-3-8910 (3 voices each, 6 voices total).
 * **Amplification:** 2x **LM386** operational amplifiers configured for a **200x Gain**, ensuring robust output for speakers or headphones.
@@ -40,17 +40,17 @@ The bus state is controlled directly via the Address Bus (A0-A2), with A3 held a
 | **BDIR** | Linked to **A1** | Bus Direction (Read/Write select) |
 
 ### Stereo Selection (Chip Select)
-The fourth 74138 uses **A2** to toggle between the due physical chips:
+The fourth 74138 uses **A2** to toggle between the two physical chips:
 * **Left Channel (PSG 1):** Active when **A2 = 0**.
 * **Right Channel (PSG 2):** Active when **A2 = 1**.
 
 ---
 
-## 📐 Board Layout & Rendering
+## 📐 Board Layout & Gallery
 
 The layout manages high-frequency digital signals and analog audio traces with specific separation to minimize interference.
 
-![3D Rendering](https://github.com/Boogs77/BO6502/blob/main/BO6502%20SOUND/gallery/Sound_final_rev01.png?raw=true)
+![Hardware Gallery](https://github.com/Boogs77/BO6502/blob/main/BO6502%20AUDIO/gallery/Audio_005.png?raw=true)
 
 ---
 
