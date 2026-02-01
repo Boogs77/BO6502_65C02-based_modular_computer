@@ -30,6 +30,14 @@ The PCB features **5 dedicated Jumpers** to allow precise hardware-level control
 
 ---
 
+## 📐 Board Layout & Rendering
+
+The layout is optimized for signal integrity, with jumpers placed for easy access during hardware debugging.
+
+![3D Rendering](https://github.com/Boogs77/BO6502/blob/main/BO6502%20CPU/gallery/CPU_final_rev02.png?raw=true)
+
+---
+
 ## 📐 Technical Specifications
 
 | Specification | Detail |
@@ -49,6 +57,7 @@ The **VP_COMP** jumper is essential for projects requiring strict timing or hard
 ## 📂 Related Modules
 * 🏗️ **[Backplate System](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BACKPLATE/README.md)**: Main communication bus.
 * 🔌 **[Bridge Connector](https://github.com/Boogs77/BO6502/blob/main/BO6502%20CONNECTOR/README.md)**: Multi-backplate expansion.
+* 🖼️ **[Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md)**: Graphical interface module.
 
 ---
 © 2026 Boogs77 | Engineered for the 6502 enthusiast.
