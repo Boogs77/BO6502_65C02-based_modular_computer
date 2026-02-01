@@ -29,6 +29,30 @@ The module utilizes the versatile **W65C22 VIA** (Versatile Interface Adapter) t
 | **Bus Connector** | 39-pin (36 Active + 3 Spare) |
 | **Power Supply** | +5V DC via Backplane |
 
+### VIA 65C22 Register Mapping ($D1AX)
+
+| Address | Register | Function |
+| :--- | :--- | :--- |
+| **$D1A0** | **ORB/IRB** | **Joystick 2**: Input Data (Directions & Buttons) |
+| **$D1A1** | **ORA/IRA** | **Joystick 1**: Input Data (Directions & Buttons) |
+| **$D1A2** | **DDRB** | Data Direction Register B (Set to `$00` for input) |
+| **$D1A3** | **DDRA** | Data Direction Register A (Set to `$00` for input) |
+
+---
+
+## 🕹️ Signal Mapping (Sega Master System)
+
+For both ports, a **bit value of 0** (Low) indicates the button is currently pressed.
+
+| Bit | Signal | Port A ($D1A1) | Port B ($D1A0) |
+| :--- | :--- | :--- | :--- |
+| **0** | **UP** | Joystick 1 - Up | Joystick 2 - Up |
+| **1** | **DOWN** | Joystick 1 - Down | Joystick 2 - Down |
+| **2** | **LEFT** | Joystick 1 - Left | Joystick 2 - Left |
+| **3** | **RIGHT** | Joystick 1 - Right | Joystick 2 - Right |
+| **4** | **FIRE 1** | Joystick 1 - Button 1 | Joystick 2 - Button 1 |
+| **5** | **FIRE 2** | Joystick 1 - Button 2 | Joystick 2 - Button 2 |
+
 ---
 
 ## 📐 Board Layout & Rendering
@@ -41,17 +65,13 @@ The revision 02 features an optimized trace routing to prevent signal ghosting a
 
 ## 🖥️ Programming Guide
 
-To read the joystick state, software must initialize the VIA Data Direction Registers (DDR) as inputs. The status of the buttons can then be polled at the following base address:
+To read the joystick state, software must initialize the VIA Data Direction Registers (DDR) as inputs.
 
-* **Base Address:** `$D1A0`
-* **Signal Logic:** A `0` (Low) on the corresponding bit indicates the button is pressed.
+```assembly
+; Example 6502 Initialization
+LDA #$00
+STA $D1A2    ; Set Port B as Input (Joystick 2)
+STA $D1A3    ; Set Port A as Input (Joystick 1)
 
----
-
-## 📂 Related Modules
-* 🏗️ **[Backplate System](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BACKPLATE/README.md)**: Main bus backbone.
-* 🧠 **[CPU Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20CPU/README.md)**: System processing unit.
-* 🖼️ **[Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md)**: Ideal for graphical game output.
-
----
-© 2026 Boogs77 | Engineered for the 6502 enthusiast.
+; Reading Joystick 1
+LDA $D1A1    ; Read Port A status
