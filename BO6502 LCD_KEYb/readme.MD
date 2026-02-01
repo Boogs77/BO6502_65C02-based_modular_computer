@@ -15,8 +15,8 @@ The **LCD & Keyboard Interface** provides a complete user interface solution for
 
 The module leverages the **W65C22 VIA** (Versatile Interface Adapter) to manage both the LCD output and the keyboard data acquisition.
 
-* **LCD Display:** Interface for standard 16x2 modules (HD44780 controller) using pins **PB0-PB7** for the data bus.
-* **Keyboard Interface:** 5-pin DIN input (X1) interfaced to VIA pins **PA0-PA1** via shift logic.
+* **LCD Display:** Interface for standard 16x2 modules (HD44780 controller) using pins **PB0-PB6** for the data bus.
+* **Keyboard Interface:** 5-pin DIN input (X1) interfaced to VIA pins **PA0-PA7** via shift logic.
 * **Acquisition Logic:** Dual **74HCT595N** shift registers handle the serialization of keyboard data, synchronized by the `KB_CLK` signal and cleaned through **74HCT14N** Schmitt triggers.
 
 ---
