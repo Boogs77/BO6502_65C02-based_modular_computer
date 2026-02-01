@@ -1,58 +1,61 @@
-# BO6502 LCD & Keyboard Interface
+# BO6502 Keyboard Interface
 
-![Module Type](https://img.shields.io/badge/Module-I%2FO-blue)
-![Status](https://img.shields.io/badge/Status-Legacy/In--Testing-yellow)
-![Compatibility](https://img.shields.io/badge/Keyboard-AT/PS2%20(DIN5)-orange)
+![Module Type](https://img.shields.io/badge/Module-Input-orange)
+![Compatibility](https://img.shields.io/badge/Keyboard-AT/PS2%20(DIN5)-blue)
+![Status](https://img.shields.io/badge/Status-Final--Rev01-success)
 
-The **LCD & Keyboard Interface** provides a complete user interface solution for the BO6502 system, integrating an alphanumeric display and support for vintage 5-pin DIN keyboards.
-
-> [!CAUTION]
-> **Compatibility Note:** This board utilizes a broad addressing range based on the **$DXXX** interval. Due to this wide decoding, the module may conflict with other peripherals in the project occupying the same memory space. Consequently, the keyboard section was later extracted into a dedicated standalone module.
+The **Standalone Keyboard Interface** is a dedicated input module for the BO6502 system. It was developed to isolate the keyboard logic from the legacy combined display module, ensuring better address space management and system stability.
 
 ---
 
 ## 🛠 Hardware Specifications
 
-The module leverages the **W65C22 VIA** (Versatile Interface Adapter) to manage both the LCD output and the keyboard data acquisition.
+This module focuses exclusively on interfacing a vintage 5-pin DIN keyboard to the system bus using a **W65C22 VIA**.
 
-* **LCD Display:** Interface for standard 16x2 modules (HD44780 controller) using pins **PB0-PB6** for the data bus.
-* **Keyboard Interface:** 5-pin DIN input (X1) interfaced to VIA pins **PA0-PA7** via shift logic.
-* **Acquisition Logic:** Dual **74HCT595N** shift registers handle the serialization of keyboard data, synchronized by the `KB_CLK` signal and cleaned through **74HCT14N** Schmitt triggers.
+* **Input Port:** Standard 5-pin DIN connector for AT/PS2-style keyboards.
+* **Logic Architecture:** The keyboard clock (`KB_CLK`) and data (`KB_DATA`) signals are processed through **74HCT14N** Schmitt triggers to eliminate noise and ensure clean signal transitions.
+* **Data Acquisition:** Employs two **74HCT595N** shift registers to convert the serial keyboard stream into a parallel format accessible by the VIA.
 
 ---
 
-## 🕹️ VIA 65C22 Register Mapping ($DXXX)
+## 🕹️ Address Decoding & VIA Mapping ($D18X)
 
-The VIA registers are mapped into the I/O space to control the onboard peripherals:
+Unlike the legacy module, this board features a precise decoding scheme using **three 74LS138** demultiplexers to identify the **$D18X** address range.
 
-| Register | Address (Base) | Specific Function |
+| Register | Address | Specific Function |
 | :--- | :--- | :--- |
-| **ORB/IRB** | `$D000`* | **LCD Data Bus**: Sends data/instructions to the display (PB0-PB7) |
-| **ORA/IRA** | `$D001`* | **Keyboard Interface**: Serial data acquisition (PA0-PA1) |
-| **DDRB** | `$D002`* | Port B Direction Register (Set as Output for LCD) |
-| **DDRA** | `$D003`* | Port A Direction Register (Set as Input for Keyboard) |
+| **ORA/IRA** | `$D181` | **Keyboard Data**: Input for parallel data bits (PA0-PA7). |
+| **DDRA** | `$D183` | Port A Direction Register (Must be set to `$00` for input). |
+| **CA1** | — | **KB_INT**: Handled via VIA interrupt control for new keystrokes. |
 
-*\*Note: Address depends on the specific partial decoding of the $DXXX range.*
-
-### Signal Details
-* **PB0 - PB7:** Connected to LCD pins **DB0 - DB7** for character and command transfer.
-* **PA0 - PA1:** Serial data reception from the 74HCT595 shift registers.
-* **CA1:** Keyboard interrupt management (**KB_INT**) to signal the CPU when new data is available.
+### Signal Distribution
+* **PA0 - PA7:** Dedicated to the parallel output of the shift registers, allowing the CPU to read a full byte for each keystroke.
+* **Decoding Logic:** The triple 74138 configuration ensures the module only responds to the specific **$D18X** page, preventing the broad address conflicts found in the previous combined version.
 
 ---
 
 ## 📐 Board Layout & Rendering
 
-The design features an onboard potentiometer (R2) for display contrast adjustment (V0) and dedicated protection components for the keyboard input.
+The revision 01 layout provides a streamlined path from the DIN connector to the shift registers, minimizing signal latency and interference.
 
-![3D Rendering](https://github.com/Boogs77/BO6502/blob/main/BO6502%20LCD_KEYb/gallery/LCD_KEYb_final_rev02.png?raw=true)
+![3D Rendering](https://github.com/Boogs77/BO6502/blob/main/BO6502%20KEYb/gallery/KEYb_final-rev01.png?raw=true)
+
+---
+
+## 🖥️ Programming Guide
+
+The software should monitor the `KB_INT` signal. When a key is pressed, the shift registers populate the VIA's Port A.
+
+1. **Initialization**: Set `DDRA` to `$00` to configure Port A as input.
+2. **Interrupts**: Enable the `CA1` interrupt in the VIA to detect the keyboard's data-ready signal.
+3. **Reading**: Upon interrupt, read the scan code directly from the Port A register at `$D181`.
 
 ---
 
 ## 📂 Related Modules
 * 🏗️ **[Backplate System](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BACKPLATE/README.md)**: 39-pin bus support.
 * 🧠 **[CPU Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20CPU/README.md)**: W65C02 central processor.
-* 🖼️ **[Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md)**: High-resolution graphical alternative.
+* 📜 **[Legacy LCD & Keyboard Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20LCD_KEYb/README.md)**: The original combined module with $DXXX addressing.
 
 ---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.
