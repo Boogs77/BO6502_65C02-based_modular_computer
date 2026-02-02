@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -152,8 +152,8 @@
 <wire x1="0.254" y1="0" x2="-0.889" y2="0" width="0.1524" layer="20"/>
 <wire x1="99.314" y1="5.08" x2="100.711" y2="5.08" width="0.1524" layer="20"/>
 <wire x1="99.314" y1="0" x2="100.457" y2="0" width="0.1524" layer="20"/>
-<text x="38.2016" y="39.6654" size="2.032" layer="25" rot="SR0">BO6502 - SERIAL rev. 01</text>
-<text x="70.7136" y="39.6654" size="2.032" layer="26" rot="SMR0">BO6502 - SERIAL rev. 01</text>
+<text x="38.2016" y="39.6654" size="2.032" layer="25" rot="SR0">BO6502 - SERIAL rev. 03</text>
+<text x="70.7136" y="39.6654" size="2.032" layer="26" rot="SMR0">BO6502 - SERIAL rev. 03</text>
 <rectangle x1="29.85008125" y1="35.971478125" x2="29.972" y2="35.981634375" layer="25"/>
 <rectangle x1="29.585921875" y1="35.9816375" x2="30.236159375" y2="35.99179375" layer="25"/>
 <rectangle x1="29.464003125" y1="35.991796875" x2="30.358078125" y2="36.001953125" layer="25"/>
@@ -7083,7 +7083,7 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="-7.874" y="47.117" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="6.223" y="44.8564" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="LED5MM" package3d_urn="urn:adsk.eagle:package:15799/2" value="RED" x="5.588" y="59.69" smashed="yes" rot="R270">
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="LED5MM" package3d_urn="urn:adsk.eagle:package:15799/2" override_package3d_urn="urn:adsk.eagle:package:51395390/2" override_package_urn="urn:adsk.eagle:footprint:15655/1" value="RED" x="5.588" y="59.69" smashed="yes" rot="R270">
 <attribute name="NAME" x="3.429" y="55.5244" size="1.27" layer="25" ratio="10"/>
 <attribute name="POPULARITY" value="93" x="7.747" y="59.69" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -7103,7 +7103,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="8.763" y="14.859" size="1.778" layer="25" rot="R90"/>
 <attribute name="VALUE" x="17.145" y="20.574" size="1.778" layer="27"/>
 </element>
-<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO41-10" package3d_urn="urn:adsk.eagle:package:43336/1" value="BS140" x="34.88870625" y="53.5559" smashed="yes" rot="R270">
+<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO41-10" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:51395389/2" override_package_urn="urn:adsk.eagle:footprint:43094/1" value="BS140" x="34.88870625" y="53.5559" smashed="yes" rot="R270">
 <attribute name="NAME" x="36.53970625" y="55.5879" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="POPULARITY" value="82" x="34.88870625" y="53.5559" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="32.09470625" y="55.5879" size="1.27" layer="27" ratio="10" rot="R270"/>
@@ -7262,7 +7262,8 @@ design rules under a new name.</description>
 <wire x1="6.858" y1="52.578" x2="5.588" y2="53.848" width="0.254" layer="16"/>
 <wire x1="6.858" y1="21.336" x2="6.858" y2="52.578" width="0.254" layer="16"/>
 <wire x1="5.715" y1="20.193" x2="6.858" y2="21.336" width="0.254" layer="16"/>
-<wire x1="57.658" y1="14.478" x2="57.658" y2="13.462" width="0.254" layer="16"/>
+<wire x1="57.658" y1="14.478" x2="57.658" y2="14.224" width="0.254" layer="16"/>
+<wire x1="57.658" y1="14.224" x2="57.658" y2="13.462" width="0.254" layer="16"/>
 <wire x1="58.674" y1="15.494" x2="57.658" y2="14.478" width="0.254" layer="16"/>
 <wire x1="58.674" y1="25.908" x2="58.674" y2="15.494" width="0.254" layer="16"/>
 <wire x1="57.658" y1="26.924" x2="58.674" y2="25.908" width="0.254" layer="16"/>
@@ -7306,6 +7307,19 @@ design rules under a new name.</description>
 <wire x1="43.18" y1="57.15" x2="5.588" y2="57.15" width="0.254" layer="16"/>
 <wire x1="44.958" y1="55.372" x2="43.18" y2="57.15" width="0.254" layer="16"/>
 <wire x1="44.958" y1="52.324" x2="44.958" y2="55.372" width="0.254" layer="16"/>
+<contactref element="U1" pad="9"/>
+<wire x1="31.242" y1="13.97" x2="30.734" y2="13.97" width="0.254" layer="16"/>
+<wire x1="33.782" y1="16.51" x2="31.242" y2="13.97" width="0.254" layer="16"/>
+<wire x1="55.372" y1="16.51" x2="38.354" y2="16.51" width="0.254" layer="16"/>
+<wire x1="38.354" y1="16.51" x2="33.782" y2="16.51" width="0.254" layer="16"/>
+<wire x1="57.658" y1="14.224" x2="55.372" y2="16.51" width="0.254" layer="16"/>
+<wire x1="30.734" y1="13.97" x2="30.734" y2="13.843" width="0.254" layer="16"/>
+<contactref element="U1" pad="17"/>
+<contactref element="U1" pad="16"/>
+<wire x1="40.894" y1="29.21" x2="38.354" y2="29.21" width="0.254" layer="16"/>
+<wire x1="38.354" y1="29.21" x2="38.354" y2="29.083" width="0.254" layer="16"/>
+<wire x1="40.894" y1="29.21" x2="40.894" y2="29.083" width="0.254" layer="16"/>
+<wire x1="38.354" y1="16.51" x2="38.354" y2="29.083" width="0.254" layer="16"/>
 </signal>
 <signal name="VCC">
 <contactref element="U$1" pad="18"/>
@@ -7520,12 +7534,16 @@ design rules under a new name.</description>
 <wire x1="21.844" y1="53.086" x2="21.844" y2="28.194" width="0.254" layer="16"/>
 <wire x1="24.638" y1="55.88" x2="21.844" y2="53.086" width="0.254" layer="16"/>
 <wire x1="24.638" y1="55.88" x2="24.746853125" y2="55.9689" width="0.254" layer="16"/>
+<contactref element="C4" pad="2"/>
+<wire x1="25.908" y1="54.864" x2="43.688" y2="54.864" width="0.254" layer="16"/>
+<wire x1="24.892" y1="55.88" x2="25.908" y2="54.864" width="0.254" layer="16"/>
+<wire x1="43.688" y1="54.864" x2="43.836759375" y2="54.8259" width="0.254" layer="16"/>
+<wire x1="24.892" y1="55.88" x2="24.746853125" y2="55.9689" width="0.254" layer="16"/>
 </signal>
 <signal name="N$12">
 <contactref element="Q1" pad="1"/>
 <contactref element="R2" pad="1"/>
 <contactref element="U1" pad="7"/>
-<contactref element="C4" pad="2"/>
 <wire x1="22.098" y1="48.514" x2="14.732" y2="48.514" width="0.254" layer="1"/>
 <wire x1="24.638" y1="51.054" x2="22.098" y2="48.514" width="0.254" layer="1"/>
 <wire x1="14.732" y1="48.514" x2="14.732" y2="48.4759" width="0.254" layer="1"/>
@@ -7535,9 +7553,6 @@ design rules under a new name.</description>
 <wire x1="24.384" y1="50.8" x2="24.384" y2="28.194" width="0.254" layer="16"/>
 <wire x1="24.638" y1="51.054" x2="24.384" y2="50.8" width="0.254" layer="16"/>
 <wire x1="24.638" y1="51.054" x2="24.746853125" y2="51.1429" width="0.254" layer="16"/>
-<wire x1="28.194" y1="54.61" x2="43.688" y2="54.61" width="0.254" layer="16"/>
-<wire x1="24.892" y1="51.308" x2="28.194" y2="54.61" width="0.254" layer="16"/>
-<wire x1="43.688" y1="54.61" x2="43.836759375" y2="54.8259" width="0.254" layer="16"/>
 <wire x1="24.892" y1="51.308" x2="24.746853125" y2="51.1429" width="0.254" layer="16"/>
 </signal>
 <signal name="A15">
@@ -7620,7 +7635,7 @@ design rules under a new name.</description>
 </signal>
 </signals>
 <mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC859007F"/>
 <mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
 <mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
@@ -7631,6 +7646,20 @@ design rules under a new name.</description>
 <approved hash="4,16,6b90961522cdddd0"/>
 <approved hash="4,1,214fcccb7b1666ab"/>
 <approved hash="4,1,6b90961522cdddd0"/>
+<approved hash="4,2,44ce063de2ba5fe4"/>
+<approved hash="4,3,44ce063de2ba5fe4"/>
+<approved hash="4,4,44ce063de2ba5fe4"/>
+<approved hash="4,5,44ce063de2ba5fe4"/>
+<approved hash="4,6,44ce063de2ba5fe4"/>
+<approved hash="4,7,44ce063de2ba5fe4"/>
+<approved hash="4,8,44ce063de2ba5fe4"/>
+<approved hash="4,9,44ce063de2ba5fe4"/>
+<approved hash="4,10,44ce063de2ba5fe4"/>
+<approved hash="4,11,44ce063de2ba5fe4"/>
+<approved hash="4,12,44ce063de2ba5fe4"/>
+<approved hash="4,13,44ce063de2ba5fe4"/>
+<approved hash="4,14,44ce063de2ba5fe4"/>
+<approved hash="4,15,44ce063de2ba5fe4"/>
 </errors>
 </board>
 </drawing>
@@ -7649,6 +7678,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
