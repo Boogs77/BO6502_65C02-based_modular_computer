@@ -1,7 +1,7 @@
 # BO6502 LCD & Keyboard Interface
 
 ![Module Type](https://img.shields.io/badge/Module-I%2FO-blue)
-![Status](https://img.shields.io/badge/Status-Legacy/In--Testing-yellow)
+| ![Final](https://img.shields.io/badge/Status-Final-success) 
 ![Compatibility](https://img.shields.io/badge/Keyboard-AT/PS2%20(DIN5)-orange)
 
 The **LCD & Keyboard Interface** provides a complete user interface solution for the BO6502 system, integrating an alphanumeric display and support for vintage 5-pin DIN keyboards.
