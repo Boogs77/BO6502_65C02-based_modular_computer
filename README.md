@@ -5,7 +5,7 @@
 ![CPU](https://img.shields.io/badge/CPU-W65C02S-red)
 ![Status](https://img.shields.io/badge/Dev-Phase-yellow)
 
-Technical overview of the **BO6502** core architecture. [cite_start]This system leverages the iconic 6502 instruction set with modern, high-reliability components from Western Design Center, Atmel, and Hitachi, offering a versatile platform for retro-computing enthusiasts[cite: 3].
+Technical overview of the **BO6502** core architecture. This system leverages the iconic 6502 instruction set with modern, high-reliability components from Western Design Center, Atmel, and Hitachi, offering a versatile platform for retro-computing enthusiasts.
 
 ---
 
