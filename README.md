@@ -4,8 +4,11 @@
 ![Architecture](https://img.shields.io/badge/Architecture-8--bit-blue)
 ![CPU](https://img.shields.io/badge/CPU-W65C02S-red)
 ![Status](https://img.shields.io/badge/Dev-Phase-yellow)
+[![Manual](https://img.shields.io/badge/Manual-IT%20%7C%20EN-orange)](https://github.com/Boogs77/BO6502-manual)
 
 Technical overview of the **BO6502** core architecture. This system leverages the iconic 6502 instruction set with modern, high-reliability components from Western Design Center, Atmel, and Hitachi, offering a versatile platform for retro-computing enthusiasts.
+
+### 📖 [Read the operation manual](https://github.com/Boogs77/BO6502-manual) · ▶️ [Try it in the browser emulator](https://boogs77.github.io/BO6502-miniVIC-emulator/)
 
 ---
 
@@ -78,6 +81,15 @@ Peripheral addressing is managed via **74LS138** decoders to ensure precise memo
 When using the latest system modules (VDU, Joystick, SD Card, etc.), the **ROM** and **RAM** modules must be configured to prevent address conflicts:
 - **ROM J-CS3/CS4/CS5**: Set to **VCC** to disable ROM in those specific I/O ranges.
 - **SD Card Access**: Provides **Raw Data Access** via bit-banged SPI (PA1=MISO, PA2=MOSI, PA3=SCK, PA4=CS).
+
+## 📖 Operation Manual
+
+The **[BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)**, in the style of the 1976 Apple-1 manual, describes the system board by board: the 39-pin bus pinout, memory and device maps, address decoding, every module with its jumpers, the schematics and bills of materials, every chip register, the BIOS, WozMon and Microsoft BASIC.
+
+| Language | Screen edition | Print edition |
+| :--- | :--- | :--- |
+| English | [BO6502_Manual_EN.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_EN.pdf) | [BO6502_Manual_EN_print.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_EN_print.pdf) |
+| Italian | [BO6502_Manual_IT.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_IT.pdf) | [BO6502_Manual_IT_print.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_IT_print.pdf) |
 
 ---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.
