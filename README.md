@@ -93,13 +93,6 @@ Five-minute explanatory videos, in Italian and English, with subtitles. Click a 
 <td align="center"><a href="https://youtu.be/Px_E1aIrhP4"><img src="https://img.youtube.com/vi/Px_E1aIrhP4/mqdefault.jpg" width="300" alt="The BO6502 modular computer, module by module (English)"></a><br>English</td>
 </tr></table>
 
-**The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**
-
-<table><tr>
-<td align="center"><a href="https://youtu.be/3ln8cZt3MQk"><img src="https://img.youtube.com/vi/3ln8cZt3MQk/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (Italiano)"></a><br>Italiano</td>
-<td align="center"><a href="https://youtu.be/d8nvmrTR-eE"><img src="https://img.youtube.com/vi/d8nvmrTR-eE/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (English)"></a><br>English</td>
-</tr></table>
-
 ## 📖 Operation Manual
 
 The **[BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)**, in the style of the 1976 Apple-1 manual, describes the system board by board: the 39-pin bus pinout, memory and device maps, address decoding, every module with its jumpers, the schematics and bills of materials, every chip register, the BIOS, WozMon and Microsoft BASIC.
