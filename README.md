@@ -84,10 +84,21 @@ When using the latest system modules (VDU, Joystick, SD Card, etc.), the **ROM**
 
 ## 🎬 Videos
 
-Five-minute explanatory videos, in Italian and English, with subtitles:
+Five-minute explanatory videos, in Italian and English, with subtitles. Click a picture to watch the video on YouTube.
 
-* **The BO6502 modular computer, module by module**: [Italiano](https://youtu.be/6IAn-3Ajv5s) · [English](https://youtu.be/Px_E1aIrhP4)
-* **The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**: [Italiano](https://youtu.be/3ln8cZt3MQk) · [English](https://youtu.be/d8nvmrTR-eE)
+**The BO6502 modular computer, module by module**
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/6IAn-3Ajv5s"><img src="https://img.youtube.com/vi/6IAn-3Ajv5s/mqdefault.jpg" width="300" alt="The BO6502 modular computer, module by module (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/Px_E1aIrhP4"><img src="https://img.youtube.com/vi/Px_E1aIrhP4/mqdefault.jpg" width="300" alt="The BO6502 modular computer, module by module (English)"></a><br>English</td>
+</tr></table>
+
+**The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/3ln8cZt3MQk"><img src="https://img.youtube.com/vi/3ln8cZt3MQk/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/d8nvmrTR-eE"><img src="https://img.youtube.com/vi/d8nvmrTR-eE/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (English)"></a><br>English</td>
+</tr></table>
 
 ## 📖 Operation Manual
 
