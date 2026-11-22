@@ -91,5 +91,18 @@ The **[BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)**, in 
 | English | [BO6502_Manual_EN.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_EN.pdf) | [BO6502_Manual_EN_print.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_EN_print.pdf) |
 | Italian | [BO6502_Manual_IT.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_IT.pdf) | [BO6502_Manual_IT_print.pdf](https://github.com/Boogs77/BO6502-manual/blob/main/BO6502_Manual_IT_print.pdf) |
 
+## 📜 License
+
+The project is open hardware. You are free to build, use, study, modify and sell it, as long as you credit the author.
+
+| Content | License |
+| :--- | :--- |
+| **Hardware**: schematics, PCB files, bill of materials | [CERN-OHL-P v2](LICENSE) (permissive) |
+| **Documentation and images**: README, photos, renders | [CC BY 4.0](LICENSE-docs) |
+
+Copyright (c) 2026 Boogs77. Please keep the credit "by Boogs77" and a link to this repository in your copies and derivatives.
+
+Third-party code in the firmware (for example Microsoft BASIC and WozMon) is not covered by these licenses.
+
 ---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.
