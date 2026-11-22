@@ -82,6 +82,13 @@ When using the latest system modules (VDU, Joystick, SD Card, etc.), the **ROM**
 - **ROM J-CS3/CS4/CS5**: Set to **VCC** to disable ROM in those specific I/O ranges.
 - **SD Card Access**: Provides **Raw Data Access** via bit-banged SPI (PA1=MISO, PA2=MOSI, PA3=SCK, PA4=CS).
 
+## 🎬 Videos
+
+Five-minute explanatory videos, in Italian and English, with subtitles:
+
+* **The BO6502 modular computer, module by module**: [Italiano](https://youtu.be/6IAn-3Ajv5s) · [English](https://youtu.be/Px_E1aIrhP4)
+* **The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**: [Italiano](https://youtu.be/3ln8cZt3MQk) · [English](https://youtu.be/d8nvmrTR-eE)
+
 ## 📖 Operation Manual
 
 The **[BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)**, in the style of the 1976 Apple-1 manual, describes the system board by board: the 39-pin bus pinout, memory and device maps, address decoding, every module with its jumpers, the schematics and bills of materials, every chip register, the BIOS, WozMon and Microsoft BASIC.
