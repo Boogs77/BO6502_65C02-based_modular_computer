@@ -16,6 +16,7 @@ The system utilizes a **39-pin bus architecture**, meticulously organized to ens
     * **Data Bus:** 8-bit bidirectional data lines.
     * **Power & Signal:** Dedicated lines for clock, reset, R/W, and power rails.
 * **3 Spare Connections:** Reserved for custom user interrupts, I/O strobes, or future protocol expansions (e.g., I2C/SPI).
+    * **SPARE2 (pin 38)** is used by the [sound boards](../BO6502%20AUDIO/README.md) to pass the chip select from the right/left channel board that decodes the address to the other one.
 * **Capacity:** 5 high-quality expansion slots per backplate.
 
 ---

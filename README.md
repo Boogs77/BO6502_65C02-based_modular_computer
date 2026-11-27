@@ -55,6 +55,9 @@ Peripheral addressing is managed via **74LS138** decoders to ensure precise memo
 | **[Standalone Keyb](https://github.com/Boogs77/BO6502/tree/main/BO6502%20KEYb)** | ![Input](https://img.shields.io/badge/Module-Input-orange) | ![Rev01](https://img.shields.io/badge/Status-Final--Rev01-success) | **$D18X** | [Keyboard PCB](https://github.com/Boogs77/BO6502/blob/main/BO6502%20KEYb/gallery/KEYb_final-rev01.png?raw=true) |
 | **[Big LCD Module](https://github.com/Boogs77/BO6502/tree/main/BO6502%20BIGLCD)** | ![Video](https://img.shields.io/badge/Module-Video-blue) | ![Final](https://img.shields.io/badge/Status-Final-success) | **$D19X** | [Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md) |
 | **[Legacy LCD/Keyb](https://github.com/Boogs77/BO6502/tree/main/BO6502%20LCD_KEYb)** | ![I/O](https://img.shields.io/badge/Module-Legacy-yellow) | ![Final](https://img.shields.io/badge/Status-Final-success) | **$DXXX** | [Legacy PCB](https://github.com/Boogs77/BO6502/blob/main/BO6502%20LCD_KEYb/gallery/LCD_KEYb_final_rev02.png?raw=true) |
+| **[Sound](BO6502%20AUDIO/README.md)** | ![Audio](https://img.shields.io/badge/Module-Audio-yellow) | ![Rev03](https://img.shields.io/badge/Status-Final--Rev03-success) | **$D1C0** right, **$D1C4** left | [Sound PCB](BO6502%20AUDIO/export/AUDIO_021.png) |
+
+**Stereo sound**: one PCB with one AY-3-8910, built twice; jumpers J-CS0/J-CS1 select the right or left channel. The left board decodes the address and passes the chip select to the right one on **SPARE2** of the backplane. Details in the [Sound module README](BO6502%20AUDIO/README.md).
 
 ---
 

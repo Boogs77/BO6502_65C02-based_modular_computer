@@ -1,74 +1,101 @@
-# BO6502 Dual Sound Module
+# BO6502 Sound Module
 
 ![Module Type](https://img.shields.io/badge/Module-Audio-yellow)
-![Chipset](https://img.shields.io/badge/IC-2x%20AY--3--8910-red)
-![Status](https://img.shields.io/badge/Status-In%20Testing-yellow)
-![Output](https://img.shields.io/badge/Audio-Stereo%20Amplified-blue)
+![Chipset](https://img.shields.io/badge/IC-AY--3--8910-red)
+![Status](https://img.shields.io/badge/Status-Final--Rev03-success)
+![Output](https://img.shields.io/badge/Audio-Stereo%20with%20two%20boards-blue)
 
-A powerful stereo sound expansion for the BO6502 system, featuring two **General Instrument AY-3-8910** Programmable Sound Generators (PSG). This module provides 6 analog channels, noise generation, and versatile envelope control.
+Sound board for the BO6502 system, built around one **General Instrument AY-3-8910** Programmable Sound Generator (3 voices, noise, envelope).
 
-> [!WARNING]  
-> **Current Status: Prototype / In-Testing.** > The hardware has been manufactured, but comprehensive functional testing is currently underway to ensure signal stability and audio fidelity.
+**One PCB, two channels.** The same board is built twice and the jumpers decide whether it is the **right** or the **left** channel. The idea was to separate the two channels and see whether a single printed design could serve both, saving on PCB production.
 
----
-
-## 🎵 Audio Architecture
-
-The board is designed with a true stereo configuration, utilizing two independent PSGs and dedicated amplification for each channel.
-
-* **Sound Generators:** 2x AY-3-8910 (3 voices each, 6 voices total).
-* **Amplification:** 2x **LM386** operational amplifiers configured for a **200x Gain**, ensuring robust output for speakers or headphones.
-* **Output:** Stereo analog signals with independent Left/Right processing.
+![BO6502 Sound Module rev. 03](export/AUDIO_021.png)
 
 ---
 
-## 🕹️ Address Decoding & Control Logic
+## 🔊 Stereo with two boards
 
-The module features a sophisticated decoding ladder using **four 74LS138** demultiplexers to map the chips into the system I/O space.
+| Channel | J-CS0 | J-CS1 | Latch address | Write data | Read data |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Right** | 2-3 | 2-3 | `$D1C0` | `$D1C1` | `$D1C2` |
+| **Left** | 1-2 | 1-2 | `$D1C4` | `$D1C5` | `$D1C6` |
 
-### Memory Mapping
-* **Base Range:** Decoded at **$D1C0 - $D1CF**.
-* **Logic:** The first three 74138 ICs identify the **$D1CX** range. The fourth 74138 handles chip selection and synchronization with the system **Clock (High Level)**.
+J-CS0 and J-CS1 must always be set to the same channel.
 
-### Register Selection (Bus Control)
-The bus state is controlled directly via the Address Bus (A0-A2), with A3 held at 0:
+### Shared chip select on SPARE2
 
-| Signal | Routing | Function |
+The address is decoded **on the left board only**. The resulting chip select (`~CS`, active low) travels to the right board on **SPARE2** (pin 38) of the 39-pin bus.
+
+| Part | Left board | Right board |
+| :--- | :---: | :---: |
+| IC1, IC2, IC3 (address decoder) | fitted | **not fitted** |
+| IC4, IC5 (bus control), IC7 (AY-3-8910) | fitted | fitted |
+
+> [!IMPORTANT]
+> * Fit IC1-IC3 on the left board only: otherwise two outputs drive the same SPARE2 line.
+> * The right board does not work without the left one on the same bus.
+> * Do not use SPARE2 for anything else while the sound boards are plugged in.
+
+---
+
+## 🕹️ Address decoding and bus control
+
+* **IC1, IC2, IC3** (74AC138) decode the range `$D1C0-$D1CF` and generate `~CS`. **A3 is not decoded**, so `$D1C8-$D1CF` repeats `$D1C0-$D1C7`.
+* **IC4** (74AC138) combines `~CS`, `A0`, `A1`, `R/~W` and `A2` (channel, through J-CS0 and J-CS1).
+* **IC5** (74HCT00) turns the IC4 outputs into `BDIR` and `BC1`. `BC2` is tied to VCC.
+* The AY clock is **PHI0** from the bus.
+
+| Offset (from the channel base) | Access | BDIR | BC1 | Operation |
+| :---: | :---: | :---: | :---: | :--- |
+| +0 | write | 1 | 1 | latch the register number |
+| +1 | write | 1 | 0 | write the register |
+| +2 | read | 0 | 1 | read the register |
+
+---
+
+## 🎚️ Output and optional amplifier
+
+**Both final boards:** J-CS2 on 1-2, JP1 open (no amplifier), JP2 closed (470 Ω resistor out).
+
+The three AY channels are mixed (R2, R3, R4) to a single **RCA** socket, one per board. An **LM386** amplifier stage was added in case it is needed. The two final boards do not use it.
+
+| Jumper | Setting | Effect |
 | :--- | :--- | :--- |
-| **BC1** | Linked to **A0** | Bus Control 1 (Address/Data select) |
-| **BC2** | Tied to **VCC** | Bus Control 2 (Always High) |
-| **BDIR** | Linked to **A1** | Bus Direction (Read/Write select) |
+| **J-CS2** | 1-2 | direct output to the RCA socket |
+| **J-CS2** | 2-3 | amplified output to the RCA socket |
+| **JP1** (AMPLI ON) | closed | feeds the LM386 input |
+| **JP2** (R470 OFF) | closed | bypasses the 470 Ω series resistor (R5) of the direct output |
+| **JP2** (R470 OFF) | open | R5 in series with the direct output |
 
-### Stereo Selection (Chip Select)
-The fourth 74138 uses **A2** to toggle between the two physical chips:
-* **Left Channel (PSG 1):** Active when **A2 = 0**.
-* **Right Channel (PSG 2):** Active when **A2 = 1**.
-
----
-
-## 📐 Board Layout & Gallery
-
-The layout manages high-frequency digital signals and analog audio traces with specific separation to minimize interference.
-
-![Hardware Gallery](https://github.com/Boogs77/BO6502/blob/main/BO6502%20AUDIO/gallery/Audio_005.png?raw=true)
+The extra jumpers are there to try other configurations according to needs.
 
 ---
 
-## 📐 Technical Specifications
+## 📐 Technical specifications
 
 | Specification | Detail |
 | :--- | :--- |
-| **I/O Decoding** | 4x 74LS138 Logic |
-| **Amplifier** | 2x LM386 (Gain 200) |
-| **Bus Connector** | 39-pin (36 Active + 3 Spare) |
-| **Clock Sync** | Synchronized with PHI2 High |
+| **Sound chip** | 1x AY-3-8910 per board |
+| **Logic** | 4x 74AC138, 1x 74HCT00 (right board: 1x 74AC138, 1x 74HCT00) |
+| **Amplifier** | 1x LM386 (optional) |
+| **Output** | 1x RCA per board |
+| **Bus connector** | 39-pin (36 active + 3 spare, SPARE2 used for `~CS`) |
 
 ---
 
-## 📂 Related Modules
-* 🏗️ **[Backplate System](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BACKPLATE/README.md)**: Main bus backbone.
-* 🧠 **[CPU Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20CPU/README.md)**: System processing unit.
-* 🕹️ **[Joystick Interface](https://github.com/Boogs77/BO6502/blob/main/BO6502%20JOYSTICK/README.md)**: Add gaming inputs to your audio.
+## 📁 Files
+
+| File | Content |
+| :--- | :--- |
+| [`eagle/AUDIO_final_rev03.sch`](eagle/AUDIO_final_rev03.sch), [`.brd`](eagle/AUDIO_final_rev03.brd) | EAGLE schematic and board, **rev. 03** (final) |
+| [`export/BO6502-AUDIO_021.pdf`](export/BO6502-AUDIO_021.pdf) | schematic sheet of rev. 03 (internal file number 021) |
+| `eagle/AUDIO_005.*`, `export/BO6502-AUDIO_005.pdf` | superseded version with two AY chips on one board |
+
+---
+
+## 📂 Related modules
+* 🏗️ **[Backplate System](../BO6502%20BACKPLATE/README.md)**: main bus backbone.
+* 🧠 **[CPU Module](../BO6502%20CPU/README.md)**: system processing unit.
 
 ---
 © 2026 Boogs77 | Engineered for the 6502 enthusiast.
