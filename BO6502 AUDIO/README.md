@@ -9,7 +9,11 @@ Sound board for the BO6502 system, built around one **General Instrument AY-3-89
 
 **One PCB, two channels.** The same board is built twice and the jumpers decide whether it is the **right** or the **left** channel. The idea was to separate the two channels and see whether a single printed design could serve both, saving on PCB production.
 
-![BO6502 Sound Module rev. 03](export/AUDIO_021.png)
+| Right channel (red RCA) | Left channel (white RCA) |
+| :---: | :---: |
+| ![BO6502 Sound Module rev. 03, right channel](gallery/Audio_rev03_right.png) | ![BO6502 Sound Module rev. 03, left channel](gallery/Audio_rev03_left.png) |
+
+On the right board IC1, IC2 and IC3 are not fitted.
 
 ---
 
