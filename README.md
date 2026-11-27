@@ -87,13 +87,20 @@ When using the latest system modules (VDU, Joystick, SD Card, etc.), the **ROM**
 
 ## 🎬 Videos
 
-Five-minute explanatory videos, in Italian and English, with subtitles. Click a picture to watch the video on YouTube.
+Explanatory videos (about five minutes), in Italian and English, with subtitles. Click a picture to watch the video on YouTube.
 
 **The BO6502 modular computer, module by module**
 
 <table><tr>
 <td align="center"><a href="https://youtu.be/6IAn-3Ajv5s"><img src="https://img.youtube.com/vi/6IAn-3Ajv5s/mqdefault.jpg" width="300" alt="The BO6502 modular computer, module by module (Italiano)"></a><br>Italiano</td>
 <td align="center"><a href="https://youtu.be/Px_E1aIrhP4"><img src="https://img.youtube.com/vi/Px_E1aIrhP4/mqdefault.jpg" width="300" alt="The BO6502 modular computer, module by module (English)"></a><br>English</td>
+</tr></table>
+
+**The BO6502 sound board and how to program the AY-3-8910**
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/J_3RS9zVj-4"><img src="https://img.youtube.com/vi/J_3RS9zVj-4/mqdefault.jpg" width="300" alt="The BO6502 sound board and how to program the AY-3-8910 (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/0FQ5yPwLcAE"><img src="https://img.youtube.com/vi/0FQ5yPwLcAE/mqdefault.jpg" width="300" alt="The BO6502 sound board and how to program the AY-3-8910 (English)"></a><br>English</td>
 </tr></table>
 
 ## 📖 Operation Manual

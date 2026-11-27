@@ -97,6 +97,17 @@ The extra jumpers are there to try other configurations according to needs.
 
 ---
 
+## 🎬 Video
+
+How the board works and how to program it (4:40, with subtitles). Click a picture to watch it on YouTube.
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/J_3RS9zVj-4"><img src="https://img.youtube.com/vi/J_3RS9zVj-4/mqdefault.jpg" width="300" alt="The BO6502 sound board and how to program the AY-3-8910 (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/0FQ5yPwLcAE"><img src="https://img.youtube.com/vi/0FQ5yPwLcAE/mqdefault.jpg" width="300" alt="The BO6502 sound board and how to program the AY-3-8910 (English)"></a><br>English</td>
+</tr></table>
+
+---
+
 ## 📂 Related modules
 * 🏗️ **[Backplate System](../BO6502%20BACKPLATE/README.md)**: main bus backbone.
 * 🧠 **[CPU Module](../BO6502%20CPU/README.md)**: system processing unit.
