@@ -59,8 +59,8 @@ When fully populating all 5 slots on the **Rev02** board, it is highly recommend
 ---
 
 ## 📂 Project Structure
-* `/schematics` - PDF and source files for circuit design.
-* `/gerber` - Production-ready files for PCB manufacturing.
+* `/eagle` - EAGLE schematic and board files.
+* `/export` - PDF schematics and Gerber files for PCB manufacturing.
 * `/gallery` - High-resolution renders and photos of the hardware.
 
 ---
