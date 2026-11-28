@@ -58,4 +58,14 @@ The software should monitor the `KB_INT` signal. When a key is pressed, the shif
 * 📜 **[Legacy LCD & Keyboard Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20LCD_KEYb/README.md)**: The original combined module with $DXXX addressing.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`KEYb_final_gerber.zip`](export/KEYb_final_gerber.zip) | `KEYb_final-rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

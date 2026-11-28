@@ -37,4 +37,14 @@ A key feature of this connector is its **Power Link Flexibility**:
 * **Isolation Mode:** Always ensure the power link is physically disconnected before applying two different power sources to the system to prevent backfeeding.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_connector_gerber.zip`](export/BO6502_connector_gerber.zip) | `connector_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | Part of the BO6502 Project ecosystem.

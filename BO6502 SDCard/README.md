@@ -64,4 +64,14 @@ Since the interface provides **raw data access**, the user must implement the SP
 * 💾 **[RAM Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20RAM/README.md)**: Essential for buffering SD card sectors.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_SDCARD_gerber.zip`](export/BO6502_SDCARD_gerber.zip) | `SDcard_final_rev02.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

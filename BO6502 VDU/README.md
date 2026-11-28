@@ -50,4 +50,14 @@ Before the final PCB production, the board underwent rigorous testing:
 * 🖥️ **[Monitor Interface](https://github.com/Boogs77/BO6502/blob/main/BO6502%20MONITOR/README.md)**: Used during early VDP register debugging.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`VDU_TMS_gerber.zip`](export/VDU_TMS_gerber.zip) | `VDU_TMS_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

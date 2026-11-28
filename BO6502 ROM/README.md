@@ -51,4 +51,16 @@ This configuration carves out the necessary address space for peripheral hardwar
 * 🏗️ **[Backplate System](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BACKPLATE/README.md)**: Main 39-pin system bus.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_ROM24K_gerber.zip`](export/BO6502_ROM24K_gerber.zip) | `ROM24k_final_rev01.brd` |
+| [`BO6502_ROM_gerber.zip`](export/BO6502_ROM_gerber.zip) | `ROM_final_rev01.brd` |
+| [`BO6502_ROMMULTI_gerber.zip`](export/BO6502_ROMMULTI_gerber.zip) | `ROMmulti_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

@@ -56,4 +56,14 @@ To initialize the serial port, the software must configure the Control and Comma
 * 📜 **[ROM Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20ROM/README.md)**: Often contains the serial terminal driver or monitor.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_serial_gerber.zip`](export/BO6502_serial_gerber.zip) | `Serial_final_rev03.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

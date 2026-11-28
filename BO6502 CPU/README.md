@@ -60,4 +60,14 @@ The **VP_COMP** jumper is essential for projects requiring strict timing or hard
 * 🖼️ **[Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md)**: Graphical interface module.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_CPU_gerber.zip`](export/BO6502_CPU_gerber.zip) | `CPU_final_rev02.brd` |
+
+---
 © 2026 Boogs77 | Engineered for the 6502 enthusiast.

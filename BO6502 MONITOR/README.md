@@ -51,4 +51,14 @@ The board provides clean routing for the 39-pin system bus directly to the Ardui
 * 🔴 **[LED Test Board](https://github.com/Boogs77/BO6502/blob/main/BO6502%20LED/README.md)**: Alternative visual diagnostic tool.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_MONITOR_gerber.zip`](export/BO6502_MONITOR_gerber.zip) | `MONITOR_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

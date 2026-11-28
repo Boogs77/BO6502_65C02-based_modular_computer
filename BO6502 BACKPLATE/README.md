@@ -64,4 +64,15 @@ When fully populating all 5 slots on the **Rev02** board, it is highly recommend
 * `/gallery` - High-resolution renders and photos of the hardware.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_backplate5V_gerber.zip`](export/BO6502_backplate5V_gerber.zip) | `backplate5V_final_rev01.brd` |
+| [`BO6502_backplate_gerber.zip`](export/BO6502_backplate_gerber.zip) | `backplate_final_rev02.brd` |
+
+---
 © 2024 Boogs77 | Part of the BO6502 Project ecosystem.

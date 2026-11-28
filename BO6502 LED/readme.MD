@@ -50,3 +50,13 @@ LOOP:
     INC $D000 ; Increment Port B LEDs
     INC $D001 ; Increment Port A LEDs
     JMP LOOP
+
+---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_LED_gerber.zip`](export/BO6502_LED_gerber.zip) | `led_final.brd` |

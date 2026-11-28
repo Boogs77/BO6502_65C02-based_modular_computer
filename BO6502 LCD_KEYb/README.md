@@ -55,4 +55,14 @@ The design features an onboard potentiometer (R2) for display contrast adjustmen
 * 🖼️ **[Big LCD Module](https://github.com/Boogs77/BO6502/blob/main/BO6502%20BIGLCD/README.md)**: High-resolution graphical alternative.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_LCD-KEYb_gerber.zip`](export/BO6502_LCD-KEYb_gerber.zip) | `LCD_KEYb_final_rev02.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

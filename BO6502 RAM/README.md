@@ -44,4 +44,14 @@ The Revision 02 layout features optimized traces for high-speed signal integrity
 * 🖥️ **[Monitor Interface](https://github.com/Boogs77/BO6502/blob/main/BO6502%20MONITOR/README.md)**: Recommended for debugging RAM read/write operations.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502-RAM_gerber.zip`](export/BO6502-RAM_gerber.zip) | `RAM_final_rev02.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

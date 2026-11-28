@@ -53,4 +53,14 @@ The layout provides easy access to the reset button and features jumpers for qui
 * 🖥️ **[Monitor Interface](https://github.com/Boogs77/BO6502/blob/main/BO6502%20MONITOR/README.md)**: Used to verify bus activity after a reset.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_reset_gerber.zip`](export/BO6502_reset_gerber.zip) | `reset_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

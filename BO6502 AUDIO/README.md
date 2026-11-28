@@ -113,4 +113,14 @@ How the board works and how to program it (4:40, with subtitles). Click a pictur
 * 🧠 **[CPU Module](../BO6502%20CPU/README.md)**: system processing unit.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_AUDIO_gerber.zip`](export/BO6502_AUDIO_gerber.zip) | `AUDIO_final_rev03.brd` |
+
+---
 © 2026 Boogs77 | Engineered for the 6502 enthusiast.

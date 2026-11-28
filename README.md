@@ -126,4 +126,32 @@ Copyright (c) 2026 Boogs77. Please keep the credit "by Boogs77" and a link to th
 Third-party code in the firmware (for example Microsoft BASIC and WozMon) is not covered by these licenses.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502_AUDIO_gerber.zip`](BO6502%20AUDIO/export/BO6502_AUDIO_gerber.zip) | `AUDIO_final_rev03.brd` |
+| [`BO6502_backplate5V_gerber.zip`](BO6502%20BACKPLATE/export/BO6502_backplate5V_gerber.zip) | `backplate5V_final_rev01.brd` |
+| [`BO6502_backplate_gerber.zip`](BO6502%20BACKPLATE/export/BO6502_backplate_gerber.zip) | `backplate_final_rev02.brd` |
+| [`BO6502-BigLCD_final_gerber.zip`](BO6502%20BIGLCD/export/BO6502-BigLCD_final_gerber.zip) | `BigLCD_final_rev02.brd` |
+| [`BO6502_connector_gerber.zip`](BO6502%20CONNECTOR/export/BO6502_connector_gerber.zip) | `connector_final_rev01.brd` |
+| [`BO6502_CPU_gerber.zip`](BO6502%20CPU/export/BO6502_CPU_gerber.zip) | `CPU_final_rev02.brd` |
+| [`Joystick_final_rev02_gerber.zip`](BO6502%20JOYSTICK/export/Joystick_final_rev02_gerber.zip) | `Joystick_final_rev02.brd` |
+| [`KEYb_final_gerber.zip`](BO6502%20KEYb/export/KEYb_final_gerber.zip) | `KEYb_final-rev01.brd` |
+| [`BO6502_LCD-KEYb_gerber.zip`](BO6502%20LCD_KEYb/export/BO6502_LCD-KEYb_gerber.zip) | `LCD_KEYb_final_rev02.brd` |
+| [`BO6502_LED_gerber.zip`](BO6502%20LED/export/BO6502_LED_gerber.zip) | `led_final.brd` |
+| [`BO6502_MONITOR_gerber.zip`](BO6502%20MONITOR/export/BO6502_MONITOR_gerber.zip) | `MONITOR_final_rev01.brd` |
+| [`BO6502-RAM_gerber.zip`](BO6502%20RAM/export/BO6502-RAM_gerber.zip) | `RAM_final_rev02.brd` |
+| [`BO6502_reset_gerber.zip`](BO6502%20RESET/export/BO6502_reset_gerber.zip) | `reset_final_rev01.brd` |
+| [`BO6502_ROM24K_gerber.zip`](BO6502%20ROM/export/BO6502_ROM24K_gerber.zip) | `ROM24k_final_rev01.brd` |
+| [`BO6502_ROM_gerber.zip`](BO6502%20ROM/export/BO6502_ROM_gerber.zip) | `ROM_final_rev01.brd` |
+| [`BO6502_ROMMULTI_gerber.zip`](BO6502%20ROM/export/BO6502_ROMMULTI_gerber.zip) | `ROMmulti_final_rev01.brd` |
+| [`BO6502_SDCARD_gerber.zip`](BO6502%20SDCard/export/BO6502_SDCARD_gerber.zip) | `SDcard_final_rev02.brd` |
+| [`BO6502_serial_gerber.zip`](BO6502%20SERIAL/export/BO6502_serial_gerber.zip) | `Serial_final_rev03.brd` |
+| [`VDU_TMS_gerber.zip`](BO6502%20VDU/export/VDU_TMS_gerber.zip) | `VDU_TMS_final_rev01.brd` |
+
+---
 © 2026 Boogs77 | BO6502 Project - Technical Documentation.

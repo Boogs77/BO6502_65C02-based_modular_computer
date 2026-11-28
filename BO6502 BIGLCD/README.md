@@ -46,4 +46,14 @@ The module features an optimized layout to minimize signal noise between the VIA
 * **Contrast Adjustment:** Check the onboard potentiometer (if present) to calibrate the display visibility for different viewing angles.
 
 ---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`BO6502-BigLCD_final_gerber.zip`](export/BO6502-BigLCD_final_gerber.zip) | `BigLCD_final_rev02.brd` |
+
+---
 © 2026 Boogs77 | Part of the BO6502 Project ecosystem.

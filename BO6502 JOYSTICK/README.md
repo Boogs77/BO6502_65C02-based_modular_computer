@@ -75,3 +75,13 @@ STA $D1A3    ; Set Port A as Input (Joystick 1)
 
 ; Reading Joystick 1
 LDA $D1A1    ; Read Port A status
+
+---
+
+## 🏭 Gerber files
+
+Ready for PCB manufacturing (2 layers, drill file included). The drill hits of each file have been checked against its EAGLE board.
+
+| Gerber (ZIP) | Exported from |
+| :--- | :--- |
+| [`Joystick_final_rev02_gerber.zip`](export/Joystick_final_rev02_gerber.zip) | `Joystick_final_rev02.brd` |
